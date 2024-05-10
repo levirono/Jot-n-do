@@ -188,7 +188,7 @@ class _NotesScreenState extends State<NotesScreen> {
         .toString().padLeft(2, '0')}';
 
     // Limit the number of characters displayed
-    final maxLength = 16; // Adjust this value as needed
+    final maxLength = 16;
     return creationDate.length <= maxLength ? creationDate : creationDate
         .substring(0, maxLength);
   }
@@ -224,7 +224,6 @@ class NoteSearchDelegate extends SearchDelegate<List<Map<String, dynamic>>> {
 
   @override
   Widget buildResults(BuildContext context) {
-    // Implement search functionality here
     return Container();
   }
 

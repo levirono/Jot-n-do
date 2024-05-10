@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
         width: 150.0,
         height: 150.0,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(10.0), // Adjust as desired
+          borderRadius: BorderRadius.circular(10.0),
           child: ElevatedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/quicktodo');
@@ -177,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
         width: 150.0,
         height: 150.0,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(10.0), // Adjust as desired
+          borderRadius: BorderRadius.circular(10.0),
           child: ElevatedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/notes');
@@ -199,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
         width: 150.0,
         height: 150.0,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(10.0), // Adjust as desired
+          borderRadius: BorderRadius.circular(10.0),
           child: ElevatedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/todos');
@@ -272,7 +272,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   noteTitle: note['title'],
                   noteContent: note['note'],
                   onUpdate: () {
-                    // Refresh the UI if needed
                   },
 
                 ),
@@ -298,7 +297,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(height: 10.0),
           Container(
-              height: 300.0, // Set your desired height
+              height: 300.0, 
               child:FutureBuilder<List<Map<String, dynamic>>>(
                 future: DatabaseHelper().getTodosForToday(),
                 builder: (context, snapshot) {
@@ -320,7 +319,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           subtitle: Text('Due Date: ${todo['due_date']}'),
                           onTap: () {
                             // Navigate to TodoItemScreen with todo details
-                            // Implement this if needed
                           },
                         );
                       },
@@ -358,6 +356,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<String> _getUserName() async {
     // Fetch the user's name from the database
     final user = await DatabaseHelper().getUserName();
-    return user ?? ''; // Return user's name or an empty string if not available
+    return user ?? '';
   }
 }
